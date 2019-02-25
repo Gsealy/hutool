@@ -3,11 +3,34 @@
 
 -------------------------------------------------------------------------------------------------------------
 
+## 4.5.0
+
+### 新特性
+* 【socket】     增加Socket模块
+* 【core】        Validator增加isIpV4方法（issue#IRQ6W@Gitee）
+* 【crypto】     增加SM2Engine，支持C1C2C3和C1C3C2两种模式
+* 【core】       StrUtil.splitTrim支持其它空白符（issue#IRVPC@Gitee）
+* 【http】        请求支持DELETE附带参数模式（issue#IRW9E@Gitee）
+* 【bloomFilter】调整BitMap注释
+
+### Bug修复
+* 【crypto】     修复KeyUtil中使用BC库导致的其它密钥生成异常
+* 【core】        修正DateUtil.formatHttpDate方法
+* 【extra】        修复FTP.ls无法遍历文件问题（issue#IRTA3@Gitee）
+* 【extra】        修复QrCodeUtil中ratio参数失效问题，调整默认纠错为M（感谢@【上海】皮皮今）
+* 【core】        修复FileTypeUtil对jpg文件识别问题（issue#275@Github）
+
+-------------------------------------------------------------------------------------------------------------
+
 ## 4.4.5
 
 ### 新特性
 * 【core】        增加StrFormater代码逻辑可读性（pr#269@Github）
 * 【core】        Validator中使用泛型
+* 【core】        NumberUtil增加toBytes和toInt方法
+* 【core】        XmlUtil增加format方法，支持缩进
+* 【http】         SoapRequest增加executeBody方法（issue#IRN6I@Gitee）
+* 【core】        调整XmlUtil.toStr方法对编码的逻辑
 
 ### Bug修复
 * 【core】        修复AnnotationUtil.getAnnotationValue获取对象错误问题（issue#271@Github）

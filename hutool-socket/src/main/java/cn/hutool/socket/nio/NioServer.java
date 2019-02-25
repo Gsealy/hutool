@@ -1,4 +1,4 @@
-package cn.hutool.core.net;
+package cn.hutool.socket.nio;
 
 import java.io.Closeable;
 import java.io.IOException;
@@ -97,7 +97,8 @@ public abstract class NioServer implements Closeable {
 	private void handle(SelectionKey key) {
 		// 有客户端接入此服务端
 		if (key.isAcceptable()) {
-			final ServerSocketChannel server = (ServerSocketChannel) key.channel();// 获取通道 转化为要处理的类型
+			// 获取通道 转化为要处理的类型
+			final ServerSocketChannel server = (ServerSocketChannel) key.channel();
 			SocketChannel socketChannel;
 			try {
 				// 获取连接到此服务器的客户端通道
